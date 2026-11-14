@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №3 - DOM та BOM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="task1">
+        <h2>Завдання 1. Динамічний список задач (DOM Tree Manipulation)</h2>
+        <div class="task-controls">
+            <input type="text" id="taskInput" placeholder="Введіть нову задачу...">
+            <button id="addTaskBtn">Додати</button>
+            <select id="filterTasks">
+                <option value="all">Всі</option>
+                <option value="active">Активні</option>
+                <option value="completed">Виконані</option>
+            </select>
+        </div>
+        
+        <ul id="taskList" class="task-list"></ul>
+    </section>
+    <section id="task2">
+        <h2>Завдання 2. Оптимізація продуктивності (DocumentFragment)</h2>
+        <div class="task2-controls">
+            <button id="testDirect">Тест: Пряма вставка (2000)</button>
+            <button id="testFragment">Тест: DocumentFragment (2000)</button>
+            <button id="clearTable">Очистити таблицю</button>
+        </div>
+        
+        <div id="perfResults" class="perf-results">Час виконання: - </div>
+        <table id="perfTable">
+            <thead>
+                <tr><th>#</th><th>Дані</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    <section id="task3">
+        <h2>Завдання 3. SPA Router (BOM History API)</h2>
+        <nav id="spa-nav">
+            <a href="?tab=home" data-route="home">Головна</a>
+            <a href="?tab=profile" data-route="profile">Профіль</a>
+            <a href="?tab=settings" data-route="settings">Налаштування</a>
+        </nav>
+        <div id="router-view">Контент завантажується...</div>
+    </section>
+    <section id="task4">
+        <h2>Завдання 4. Делегування подій (Event Delegation)</h2>
+        <p>Клікніть на будь-яку картку, щоб змінити її стан. (1 обробник на весь контейнер)</p>
+        <div id="gridContainer" class="grid-container"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f6f9;
+    padding: 1rem;
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #ffffff;
+    border: none;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    border-bottom: 2px solid #f4f6f9;
+    padding-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #1a202c;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    min-height: 3rem;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #273043;
+}
+
+button:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
+}
+
+input[type="text"],
+select {
+    height: 3rem;
+    padding: 0 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    min-width: 0;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #111827;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.5rem;
+    padding-right: 2.5rem;
+    min-width: 8rem;
+}
+
+.task-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: stretch;
+    margin-bottom: 1rem;
+}
+
+#taskInput {
+    flex: 1 1 12rem;
+}
+
+#addTaskBtn,
+#filterTasks {
+    flex: 0 0 auto;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f4f6f9;
+    gap: 1rem;
+}
+
+.task-item span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.task-item button {
+    flex: 0 0 auto;
+    min-height: 2.25rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.875rem;
+}
+
+.task2-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task2-controls button {
+    flex: 1 1 14rem;
+    max-width: 20rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+th,
+td {
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f9fafb;
+    font-weight: 600;
+}
+
+.perf-results {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #d32f2f;
+    overflow-wrap: anywhere;
+}
+
+#spa-nav {
+    background-color: #111827;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+}
+
+#spa-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.25rem;
+    cursor: pointer;
+}
+
+#spa-nav a:hover {
+    text-decoration: underline;
+}
+
+#router-view {
+    padding: 1rem;
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 6px;
+    min-height: 4rem;
+    color: #4b5563;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.grid-item {
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.grid-item:hover {
+    border-color: #111827;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item.active {
+    background: #111827;
+    color: #ffffff;
+    border-color: #111827;
+}
+
+@media (max-width: 50rem) {
+    section {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .task2-controls button {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 30rem) {
+    body {
+        padding: 0.5rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+
+    .task-controls,
+    .task-item,
+    .task2-controls,
+    .grid-container {
+        gap: 0.5rem;
+    }
+
+    .task-item button {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem;
+    }
+
+    #spa-nav {
+        gap: 0.5rem 0.75rem;
+    }
+
+    #spa-nav a {
+        font-size: 0.9rem;
+    }
+
+    .grid-item {
+        padding: 0.75rem;
+    }
+
+    #taskInput {
+        flex: 1 1 100%;
+    }
+
+    #addTaskBtn,
+    #filterTasks {
+        flex: 1 1 8rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
